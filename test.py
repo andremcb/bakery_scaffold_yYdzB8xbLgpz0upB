@@ -30,7 +30,7 @@ class TestAcceptanceStripe(unittest.TestCase):
                         msg="You didn't insert a Stripe script file.")
 
     def test_acceptance_checkout_button_was_instantiated(self):
-        """Check if checkout button was captured123."""
+        """Check if checkout button was captured."""
         pattern = re.compile(
             r"document.getElementById\('checkout-button-sku_\w{14}'\);", re.I | re.M)
         res = re.search(pattern, self.dom_str)
