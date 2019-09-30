@@ -16,7 +16,7 @@ class TestAcceptanceStripe(unittest.TestCase):
             self.dom_str = file_descriptor.read()
 
     def test_acceptance_stripe_public_key_has_been_set(self):
-        """Check if Stripe key was defined."""
+        """Check if Stripe key was defined.123"""
         pattern = re.compile(r"Stripe\('pk_test_\w+'\);", re.I | re.M)
         res = re.search(pattern, self.dom_str)
         self.assertTrue(hasattr(res, 'group'), msg="You didn't define the Stripe key.")
